@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bingo.MainPage"
+             BackgroundColor="#292929">
+
+
+
+    <StackLayout Padding="20">
+
+        <Image x:Name="banner" HorizontalOptions="CenterAndExpand" Margin="0,20" />
+        
+        <Grid ColumnDefinitions="*, *"
+          RowDefinitions=" *, *, *">
+
+
+            <Label Text="Números da Sorte" TextColor="#FF00BF" FontAttributes="Bold"
+                FontSize="35" HorizontalTextAlignment="Center"
+                 Grid.Column="0" Grid.ColumnSpan="2" >
+                
+                <Label.FontFamily>
+
+                    <OnPlatform x:TypeArguments="x:String" Android="JosefinSans-Medium.ttf#JosefinSans-Medium.ttf" />
+                    
+                </Label.FontFamily>
+
+            </Label>
+
+
+            <Label Text="De" TextColor="White" 
+               FontSize="Small" HorizontalTextAlignment="Center"
+              Margin="10" Grid.Column="0" Grid.Row="1"/>
+
+            <Entry x:Name="txt_inicial" Keyboard="Numeric" Placeholder="0" 
+               TextColor="#848484" BackgroundColor="White"
+               HorizontalTextAlignment="Center"
+               Grid.Column="0" Grid.Row="2"/>
+
+            <Label Text="Até" TextColor="White" 
+               FontSize="Small" Margin="10"
+               HorizontalTextAlignment="Center"
+               Grid.Column="1" Grid.Row="1"/>
+
+            <Entry x:Name="txt_final" Keyboard="Numeric" Placeholder="0" 
+               TextColor="#848484" BackgroundColor="White"
+               HorizontalTextAlignment="Center" FontSize="Large"
+               Grid.Column="1" Grid.Row="2"/>
+
+        </Grid>
+
+
+            <Button x:Name="sorteio" Text="sortear"  Margin="50,20,50,5"
+                    CornerRadius="10" FontSize="Subtitle" FontAttributes="Bold"
+                    TextTransform="Uppercase" CharacterSpacing="3"
+                    BackgroundColor="#8904B1" TextColor="Aquamarine" Clicked="sorteio_Clicked" />
+
+
+            <Label x:Name="lbl_resultado" Text="0" TextColor="White"
+                   HorizontalTextAlignment="Center" FontSize="100"/>
+
+
+
+
+
+
+    </StackLayout>
+   
+ </ContentPage>
